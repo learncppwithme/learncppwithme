@@ -1,0 +1,22 @@
+body {
+ color: white;
+ text-align: center;
+ width: 100%;
+ overflow-x: hidden;
+ overflow-y: auto;
+ margin: 10px;
+  }
+
+body {
+  background-image: url("http://content.pimp-my-profile.com/i59/5/7/21/f_26b86718c1.gif");
+  background-color: black;
+  vertical-align: top;
+}
+
+a, a:visited {
+  color: lightblue; 
+}
+
+h1 {
+
+}
