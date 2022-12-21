@@ -2,7 +2,7 @@ body {
  color: white;
  text-align: center;
  width: 100%;
- overflow-x: auto;
+ overflow-x: hidden;
  overflow-y: auto;
  margin: 10px;
   }
