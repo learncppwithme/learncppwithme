@@ -17,6 +17,6 @@ a, a:visited {
   color: lightblue; 
 }
 
-h1 {
-
+.nav {
+	margin-top: 20px;
 }
