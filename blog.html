@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>learn c++ with me... | blog</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
+<head>
+	<title>learn c++ with me... | blog</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<!-- google analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6YQE57BVZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-	<body>
-		<!-- nav bar -->
-		<table border="0" cellpadding="0" cellspacing="0" width="50%" align="center">
-		    <tr class=nav>
-                <th><a href="index.html">home</a></th>
-                <th>blog</th>
-                <th><a href="resources.html">resources</a></th>
-                <th><a href="aboutme.html">about me</a></th>
-                <th><a href="message.html">message</a></th>
-            </tr>
-		</table>
+  gtag('config', 'G-Y6YQE57BVZ');
+</script>
+<!-- countdown for feb. contest-->
+<script>
+var countDownDate = new Date("Feb 27, 2023 8:00:00").getTime();
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "the contest has already happened!";
+  }
+}, 1000);
+</script>
+
+<body>
+	<!-- nav bar -->
+	<table border="0" cellpadding="0" cellspacing="0" width="50%" align="center">
+	<tr class=nav>
+        <th><a href="index.html">home</a></th>
+            <th>blog</th>
+            <th><a href="resources.html">resources</a></th>
+            <th><a href="aboutme.html">about me</a></th>
+            <th><a href="message.html">message</a></th>
+        </tr>
+	</table>
 <br>
 <br>
-<h1 align="center">blog</h1>
+<h1 align="center">blog</h1> <!--REMEMBER TO CHANGE THE INDEX PAGE LATEST BLOG POST AFTER EVERY UPDATE!!!-->
 <p align="center"><b>note:</b> this page only shows my lastest three blog posts! to see them all, go to the <a href="archive.html">blog archive</a>.</p>
 <table border="0" align="center">
 <tr>
@@ -36,11 +68,13 @@
     </tr>
     <tr>
         <td>
-            <ul type="circle">  
-             <li><a href="https://docs.google.com/document/d/1mD8biVKA7i7QIwNEFhK8EOv-n8QNwgT08tNJ5Outggw/edit?usp=sharing" target=_blank>weekly practice schedule!</a> (not finished..because i'm not practicing competitive programming type problems right now)</li>  
-             <li>my <a href="https://www.notion.so/coding-e56070e587e14402913ceaef57271af4" target=_blank>notion</a> for my c++/competitive programming notes!</li>  
+            <ul type="circle"> 
+			 <li>countdown to february contest:<br>
+			 <p id="demo"></p></li>
+             <li><a href="https://docs.google.com/document/d/1mD8biVKA7i7QIwNEFhK8EOv-n8QNwgT08tNJ5Outggw/edit?usp=sharing" target=_blank>weekly practice schedule!</a> (not started..because i'm not practicing competitive programming type problems right now) check in soon though!</li>  
+             <li>my <a href="https://daffodil-topaz-64a.notion.site/coding-e56070e587e14402913ceaef57271af4" target=_blank>notion</a> for my c++/competitive programming notes! (bronze topics right now!)</li>  
              <li>will update blog weekly!</li>  
-             <li>current goal: learn loops, update home page, transfer files to notepad? and finish quiz project!</li>  
+             <li>current goal: GRIND competitive programming problems and notion notes (rectangle geometry!)</li>  
             </ul> 
         </td>
     </tr>
@@ -48,39 +82,44 @@
 </td>
 <td width=5%> <!-- TRANSPARENT TABLE 2-->
     <table border="0" width=100%>
-    <tr> <td>
+    <tr><td>
     </td></tr></table>
 </td>
 <td width=60% align="right" valign="top"> <!--put daily programming practice schedule here??-->
   <table  width=100% border="1" bgcolor="#666666" cellspacing="2" cellpadding="4" align="center">
     <thead bgcolor="#666666" align="left">
     <tr><th>
-        <h2>Saturday, January 7th, 2023</h2> 
+        <h2>Friday, February 3rd, 2023</h2> 
+		<!--REMEMBER TO CHANGE THE INDEX PAGE LATEST BLOG POST AFTER EVERY UPDATE!!!-->
+		<!--REMEMBER TO CHANGE THE INDEX PAGE LATEST BLOG POST AFTER EVERY UPDATE!!!-->
+		<!--REMEMBER TO CHANGE THE INDEX PAGE LATEST BLOG POST AFTER EVERY UPDATE!!!-->
     </th></tr>
     </thead>
     <tbody bgcolor="#999999">
     <tr><th>
-    hello again! i promised to post by friday, sorry i’m a whole day late. i was a little preoccupied yesterday because i decided
-    to teach myself how to crochet…not an excuse but i don’t care i love crocheting it was worth it!!! the blog posts should 
-    become more frequent as i keep learning harder stuff, so maybe expect another in the beginning of the week? i don’t know if
-    i’ll practice anything today but i will try tomorrow (sunday), monday, and tuesday.<br>
-    i started reading the <a href="https://usaco.guide/bronze" target=_blank>usaco guide bronze section</a> to learn more about common topics. so far i’ve read some parts of<em>Time Complexity</em>
-    which includes <em>Into to Big O Notation</em> and <em>Intro to Data Structures</em>. <b>big o notation</b> is basically the bounds for how
-    complex an algorithm is in the worst case scenario. it’s useful because in a contest where there’s a time limit for how long your program
-    can take to run. (two seconds for cpp programs) at first i didn’t understand anything about this, but watching the corresponding youtube
-    video helped me a lot. honestly, it’s probably better to only understand about 50% of the topic right now, and then i’ll learn more once
-    i actually encounter practice problems where i’ll need to use big o notation. in the <b>intro to data structures</b>, a lot of the section
-    was review, like <b>vectors</b> which i learned on codecademy, but something new was <b>dynamic arrays</b>, which are similar to normal
-    arrays but can resize themselves by adding and deleting elements. i also learned about <b>iterators</b>, which point to specific objects in a container.
-    who knew there were so many topics covered in bronze? isn’t this supposed to be the easiest level…did i get as much done as i wanted to?
-    no not really, but it’s a start! and i started learning actual competitive programming topics which is great! goodbye for now!<br>
+    i think this is the closest in time any of my two blog posts have ever been. if you’re paying attention
+    to the rest of my blog page, i added a countdown to the february contest, pretty cool, right? it’s honestly 
+    just code that i modified from <a href="https://www.w3schools.com/howto/howto_js_countdown.asp" target=_blank>w3schools</a>,
+    because i don’t know really any javascript (which i probably should learn because that’s what you use with html websites),
+    but learning one language at a time is enough. anyways, hopefully i can stay motivated by seeing the timer counting down
+    every time i look at my website.<br>
+    i started my <b>rectangle geometry</b> notes, and i also moved on to another practice problem, because the solution for
+    my last one needed logarithms and i haven’t learned that yet..so maybe i should watch a khan academy video on them
+    or something? i also realized that just starting at one problem wasn’t going to help me.<br>
+    i’m thinking of signing up for a free workshop tomorrow that i found on the <a href="http://usaco.guide" target=_blank>usaco guide</a>!
+    <a href="https://joincpi.org/workshops/jan23" target=_blank>here’s the link for it</a> if you’re also interested. 
+    they’re going over the bronze and silver solutions to the workshop, and i figured that even if i don’t
+    know anything or am really lost, i won’t regret attending.<br>
+    so my weekend goals are to finish the rectangle geometry notes, attend the usaco guide workshop, start drafting a notes page on
+    my website and work on practice problems..(i was also thinking that maybe watching other people solve problems on youtube might
+    help me learn how to approach the problems better, so i’ll look for that too!)<br>
     </th></tr>
     </tbody>
   </table>  
 </td>
 <td width=5%> <!-- TRANSPARENT TABLE 3-->
     <table border="0" width=100%>
-    <tr> <td>
+    <tr><td>
     </td></tr></table>
 </td>
 </tr>
@@ -97,21 +136,23 @@
   <table  width=100% border="1" cellspacing="2" cellpadding="4" align="center">
     <thead bgcolor="#666666" align="left">
     <tr><th>
-        <h2>Tuesday, January 3rd, 2023</h2> 
-    </th></tr>
+        <h2>Wednesday, February 1st, 2023</h2> 
+    </th>	
     </thead>
     <tbody bgcolor="#999999">
     <tr><th>
-    happy new year! i had a great winter break, even though i didn’t really do anything productive related to this project,
-    it’s good to take a break sometimes, right? now that we’re in a new year, i’m trying to get a little more ambitious with
-    this website, which means i will officially start practicing competition style problems. i don’t know if i’ll need to use
-    the practice method i saw on reddit (referring to my last post), because it’s pretty intense and midterms are coming up
-    in a couple of weeks..<br>
-    it’s honestly really annoying how the january contests lines up so perfectly with midterms, how will i do both? i think
-    as a beginner i will start looking at the usaco practice problems this week and then some codeforces problems? i’ll 
-    practice a little tonight and this week, expect a blog post by friday! (i should probably post more often considering
-    now i’m getting into actual competitive programming instead of just learning cpp syntax) okay, that’s all i have to say,
-    nothing much new because of winter break!<br>    
+      sorry, i know i said i would update on friday, but i got really distracted because of midterms and i forgot that
+      i even said i would update! i didn’t really get any work done in the time between that, but i attempted a <b>simulation</b>
+      problem, and i thought i solved it but the code isn’t working :( . however, the link to the problem i attempted is
+      <a href="http://www.usaco.org/index.php?page=viewproblem2&cpid=735" target=_blank>here</a> and my code for it is 
+      <a href="https://drive.google.com/file/d/1ihPlfQMvB8honnc7iX2INxc5bU7mvPM0/view?usp=sharing" target=_blank>here</a>!
+      if you want to see it. i’ll post the code to my github once it’s actually working..i know everyone says if you dont
+      get the problem to just look up the answer and move on, but i want to try and solve at least one before i move on.<br>
+      and then once it works, i will update my github and move on to my <b>rectangle geometry</b> notes! and then i will get
+      to grinding problems to prepare for the <b><em>FEBRUARY CONTEST!!!**</b></em> now that midterms are over, school will
+      be not that hard for about a month i think, because hopefully they will not be pushing so much content on us. i know i
+      said i was trying to participate in the january contest, but honestly the timing of that was really inconvenient. i will
+      try to update on friday and work on my notes page (the one on my website i mentioned last post) over the weekend!<br>	
     </th></tr>
     </tbody>
   </table>  
@@ -121,7 +162,6 @@
     <tr> <td>
     </td></tr></table>
 </td>
-
 </tr>
 </table>
 <br><br>
@@ -136,20 +176,22 @@
   <table  width=100% border="1" cellspacing="2" cellpadding="4" align="center">
     <thead bgcolor="#666666" align="left">
     <tr><th>
-        <h2>Thursday, December 15th, 2022</h2> 
+        <h2>Monday, January 23rd, 2023</h2> 
     </th></tr>
     </thead>
     <tbody bgcolor="#999999">
     <tr><th>
-    hi again. sorry it's been so long. from now on i think i'll try to update every two weeks. but maybe i'll update again
-    next week because winter break is coming up. while i've been gone, i switched my website over to github (a different account,
-    i'll still be posting projects and stuff to my main, not school related account) and learned functions and loops! i'm trying to
-    breeze through the very basics pretty quickly so i can get to practicing some actual competitive programming style questions,
-    because they are formatted much differently than normal coding challenges. according to the <a href="https://usaco.guide/general/expected-knowledge?lang=cpp" target=_blank>usaco guide</a>
-    website, all i need to do now is learn multidimensional arrays, and then i can start solving actual problems! i'm excited but 
-    also kind of scared, because i looked at a competitive programming problem a couple months ago and it looked really complicated..<br>
-    but i plan to use this practice method i found on reddit, i can link it <a href="https://www.reddit.com/r/usaco/comments/pk3tjp/the_ultimate_usaco_practice_method/?utm_source=share&utm_medium=ios_app&utm_name=iossmf"  target=_blank>here</a>. i'm going to try and practice a lot over winter break, and if everything goes according to plan, 
-    i will be participating in the <b>january contest!!</b> that's all for now, see you next week!<br>
+      midterms week…actually my first midterm is on thursday at 8 AM (for this class), but the hardest part of 
+      midterms is the studying in my opinion.<br>
+      i finished the <b>intro to data structures</b> notes on notion! now i’m working on <b>simulation</b>, which  isn’t
+      really like programming concepts, but more about how to solve actual competitive programming problems. (but i still
+      don’t know why all the sample problems are about cows…) i’m also thinking about replacing the message page with a 
+      notes page, of course not as in depth as my other notes but just in case somebody doesn’t have notion, because you
+      can’t see them if you don’t have an account. also i feel like a message board is kind of counterintuitive because
+      i wouldn’t be getting a lot of messages anyways…<br>
+      that might be a project for after midterms though. my next blog post, at the latest, will be friday, but hopefully 
+      sooner. if it is friday, my goal is to finish the <b>rectangle geometry</b> topic. (geometry is giving me flashbacks to 
+      last year’s math..but i did actually like doing proofs unlike everyone else, it was kind of like programming lol)<br></tr>
     </th></tr>
     </tbody>
   </table>  
