@@ -15,8 +15,7 @@
 </script>
 <style>
 .collapsible {
-  background-color: #777;
-  color: white;
+  background-color: #737373;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -27,68 +26,123 @@
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
+  background-color: #5A5858;
 }
 
 .content {
   padding: 0 18px;
-  max-height: 0;
+  display: none;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  background-color: #737373;
+}
+
+.padding {
+  padding-right: 100px;
+  padding-left: 100px;
 }
 </style>
 <body>
-		<!-- nav bar -->
-		<table border="0" cellpadding="0" cellspacing="0" width="50%" align="center">
-		    <tr class=nav>
-                <th><a href="index.html">home</a></th>
-                <th><a href="blog.html">blog</a></th>
-                <th><a href="resources.html">resources</a></th>
-                <th><a href="aboutme.html">about me</a></th>
-                <th>notes</th>
-            </tr>
-		</table>
+<!-- nav bar -->
+	<table border="0" cellpadding="0" cellspacing="0" width="50%" align="center">
+		<tr class=nav>
+		<th><a href="index.html">home</a></th>
+            <th><a href="blog.html">blog</a></th>
+            <th><a href="resources.html">resources</a></th>
+            <th><a href="aboutme.html">about me</a></th>
+            <th>notes</th>
+        </tr>
+	</table>
 <!-- header --> 
+<br>
 <table width="60%" height="40" border="0" align="center">
     <tbody><tr> 
       <td width="73%" valign="top" height="18" align="center"> 
         <img src="notesheader.gif" width="250" height="75"> 
       </td>  
 </tr></tbody></table>
-
-<!-- collapsibles -->
-<p>A Collapsible:</p> <!-- figure out a way to get this into tables?-->
-<!-- i dont know if the javascript looks too fancy and takes away form the old school look of the website, try to imlement it without javascript? -->
-<button class="collapsible">Open Collapsible</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<p>Collapsible Set:</p>
-<button class="collapsible">Open Section 1</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button class="collapsible">Open Section 2</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button class="collapsible">Open Section 3</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+<br>
+<em>note: this is only the first draft of the notes page! nothing is posted yet because i'm sitll working on formatting!</em>
+<!-- collapsible -->
+<table width=75% border="0" align="center">
+<tr class="padding">
+    <td width=100% align="center" valign="top">
+        <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
+        <thead type="button" class="collapsible">
+            <tr bgcolor="#5A5858"><th><h2>rectangle geometry</h2></th></tr>
+        </thead>
+        <tbody bgcolor="#737373" class="content">
+        <tr><td>
+        here are my rectangle geometry notes:
+        </td></tr>
+        </tbody></table>
+    </td>
+</tr>
+<tr class="padding">
+	<td width=100% align="center" valign="top">
+        <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
+        <thead type="button" class="collapsible">
+            <tr bgcolor="#5A5858"><th><h2>sorting</h2></th></tr>
+        </thead>
+        <tbody bgcolor="#737373" class="content">
+        <tr><td>
+        here are my sorting notes:
+        </td></tr>
+        </tbody></table>
+    </td>
+</tr>
+<tr class="padding">
+	<td width=100% align="center" valign="top">
+        <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
+        <thead type="button" class="collapsible">
+            <tr bgcolor="#5A5858"><th><h2>data structures</h2></th></tr>
+        </thead>
+        <tbody bgcolor="#737373" class="content">
+        <tr><td>
+        here are my data structures notes:
+        </td></tr>
+        </tbody></table>
+    </td>
+</tr>
+<tr class="padding">
+	<td width=100% align="center" valign="top">
+        <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
+        <thead type="button" class="collapsible">
+            <tr bgcolor="#5A5858"><th><h2>sets and maps</h2></th></tr>
+        </thead>
+        <tbody bgcolor="#737373" class="content">
+        <tr><td>
+        here are my sets and maps notes:
+        </td></tr>
+        </tbody></table>
+    </td>
+</tr>
+<tr class="padding">
+	<td width=100% align="center" valign="top">
+        <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
+        <thead type="button" class="collapsible">
+            <tr bgcolor="#5A5858"><th><h2>time complexity</h2></th></tr>
+        </thead>
+        <tbody bgcolor="#737373" class="content">
+        <tr><td>
+        here are my time complexity notes:
+        </td></tr>
+        </tbody></table>
+    </td>
+</tr>
+<tr class="padding">
+	<td width=100% align="center" valign="top">
+        <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
+        <thead type="button" class="collapsible">
+            <tr bgcolor="#5A5858"><th><h2>simulation</h2></th></tr>
+        </thead>
+        <tbody bgcolor="#737373" class="content">
+        <tr><td>
+        here are my simulation notes:
+        </td></tr>
+        </tbody></table>
+    </td>
+</tr>
+</table>
 
 
 <!-- javascript: -->
@@ -100,16 +154,13 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (content.style.display === "block") {
+      content.style.display = "none";
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
+      content.style.display = "block";
+    }
   });
 }
 </script>
 </body>
 </html>
-
-
-  
