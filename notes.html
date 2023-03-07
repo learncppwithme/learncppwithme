@@ -219,7 +219,41 @@ for (int i = 1; i <= m; i++) {
         </thead>
         <tbody bgcolor="#737373" class="content">
         <tr><td>
-        here are my data structures notes:
+        <b>data structures</b> determine how data is organized for more efficient data access.
+		&nbsp;you should evaluate which data structure works the <b>best</b> for your particular problem, because each data structure supports different operations.
+		<br>
+		in C++, <a href=“http://www.cplusplus.com/reference/stl/” target=_blank>standard library data structures</a> store any type of data, and when declaring the data structure, put the data type in the brackets below, like this:<br>
+		<pre><code>
+		vector<string> v;
+		// this is a <b>vector</b> structure that only can store objects of type <b>string</b>. the vector is called <b>v</b>.
+		</code></pre>
+		<ul>
+		  <li>nearly every standard library data type will support two methods:</li>
+			<ul>
+			  <li><code>size()</code>, which returns the number of elements in the data structure.</li>
+			  <li><code>empty()</code>, which returns <code>true</code> if the data structure has nothing in it, and <code>false</code> if not.</li>
+			</ul>
+		</ul>
+		<h3>arrays</h3>
+		the array is one of the simplest data structures. in C++, there is also an <code>array</code> class in the STL (or <a href=“https://en.wikipedia.org/wiki/Standard_Template_Library” target=_blank>Standard Template Library</a>)<br>
+		<pre><code>
+		array<int, 25> arr;
+		// an array named <b>arr</b> of 25 <b>int<b>s
+		arr[5];
+		// accesses the element at the 5th index
+		</code></pre><br>
+		<em>the array class supports normal STL operations of course! (<code>.empty()</code> and <code>.size()</code>) and the square-bracket access operator</em><br>
+		arrays that are initialized locally using default syntax or array class are initialized to random numbers because C++ has no memory management. to initialize an array to zero, the main options are:
+		<ul>
+		  <li>use a for loop</li>
+		  <li>declare the array globally</li>
+			<ul><li>
+			note: <b>local variables</b> are declared inside a function, and <b>global variables</b> are declared outside the function!
+			</li></ul>
+		  <li></li>
+		  <li>declare the array with an empty list (like <code>int arr[25]{};</code>)</li>
+		  <li>use a built-in function (like <code>std::fill_n(arr, 25, 0)</code> or <code>std::fill(arr, arr+25, 0)</code>)</li>
+		</ul>
         </td></tr>
         </tbody></table>
     </td>
