@@ -72,7 +72,128 @@
         </thead>
         <tbody bgcolor="#737373" class="content">
         <tr><td>
-        here are my rectangle geometry notes:
+        <b>big o notation:</b> the worst case scenario of the complexity of an algorithm.
+		&nbsp;for USACO programming questions submitted in C++ , solutions must run in 2 seconds or less.
+		&nbsp;we can use big o notation to calculate how many operations it will take an algorithm to run, with <em>n</em> representing the input size.
+		<br><br>
+		so time complexity, in other words, is the upper bound for the number of steps an algorithm needs to run as a function of the input size.<br>
+		we denote time complexity in <b>big o notation<b> by <em>O(f(n))</em>, but constant factors and lower order terms are usually left out from <em>f(n)</em>.
+		<br>
+		<pre>
+		<code>
+		int a = 5;
+		int b = 7;
+		int c = 4;
+		int d = a + b + c + 153;
+		// here’s an example of code that’s O(1), because it executes a constant number of operations.
+		</code>
+		</pre><br>
+		input and output operations are also <em>O(1)</em>.
+<br><br>
+the time complexity of loops is the number of iterations it runs.
+<pre><code>
+//example one
+for(int i = 1; i <= n; i++) {
+    // constant time code here
+}
+
+//example two
+int i = 0;
+while(i < n) {
+    //constant time code here
+    i++;
+}
+// both examples are O(n), because they are iterated n times.
+</code></pre>
+<br>
+<pre><code>
+for (int i = 1; i <= n + 457737; i++) { 	
+    // constant time code here 
+}
+// because constant factors are lower order terms are ignored when measuring time complexity, the following code is also O(n).
+</code></pre>
+<pre><code>
+for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= m; j++) {
+        // constant time code here 	
+    }
+}
+</code></pre>
+<br>
+the time complexity of multiple loops is found by multiplying the time complexities of each loop. this code is <em>O(nm)</em>, because the outer loop is <em>O(n)</em> and the inner loop is <em>O(m)</em>.
+<br>
+</pre><code>
+for (int i = 1; i <= n; i++) {
+    for (int j = i; j <= n; j++) {
+        // constant time code here
+    }
+}
+// the outer loop will run O(n) times and since the inner loop can run from anywhere to 1 to n times (and big o notation calculates for worst case scenario), the inner loop is also considered O(n). so, this algorithm is O(n^2) because you multiply the complexities of both loops together! 
+</code></pre>
+<br>
+<pre><code>
+for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n; j++) {
+        // constant time code here
+    } 
+} 
+for (int i = 1; i <= m; i++) {
+    // more constant time code here
+}
+// this code is considered O(n^2 + m) because the top block is O(n^2) and the bottom block is O(m).
+</code></pre>
+<br>
+<h3>common complexities and constraints</h3>
+<table border = 1>
+  <tr>
+    <td>constant</td>
+    <td><em>O(1)</em></td>
+  </tr>
+  <tr>
+    <td>logarithmic</td>
+    <td><em>O(log(n))</em></td>
+  </tr>
+  <tr>
+    <td>linear</td>
+    <td><em>O(n)</em></td>
+  </tr>
+  <tr>
+    <td>linearithmic</td>
+    <td><em>O(n(log(n))</em></td>
+  </tr>
+  <tr>
+    <td>quadric</td>
+    <td><em>O(n^2)</em></td>
+  </tr>
+  <tr>
+    <td>cubic</td>
+    <td><em>O(n^3)</em></td>
+  </tr>
+  <tr>
+    <td>exponential</td>
+    <td><em>O(b^n)</em></td>
+  </tr>
+  <tr>
+    <td>factorial</td>
+    <td><em>O(n!)</em></td>
+  </tr>
+</table>
+<br><br>
+<ul>
+  <li>math formulas that calculate an answer: <em>O(1)</em></li>
+  <li>binary search: <em>O(log ⁡n)</em></li>
+  <li>sorted set/map or priority queue: <em>O(log ⁡n)</em> per     operation</li>
+  <li>prime factorization of an integer, or checking primality or compositeness of an integer naively: <em>O(√n)</em> (square root n)</li>
+  <li>reading in n items of input: <em>O(n)</em>
+</li>
+  <li>iterating through an array or a list of <em>n</em> elements: <em>O(n)</em></li>
+  <li>sorting: usually <em>O(n log ⁡n)</em> for default sorting algorithms (mergesort, Collections.sort, Arrays.sort)</li>
+  <li>iterating through all subsets of size <em>k</em> of the input elements: <em>O(n^k)</em>. for example, iterating through all triplets is <em>O(n^3)</em>.</li>
+  <li>iterating through all subsets of size <em>k</em> of the input elements: <em>O(n^k)</em>. for example, iterating through all triplets is <em>O(n^3)</em>.</li>
+  <li>iterating through all subsets: <em>O(2^n)</em></li>
+<li>iterating through all permutations: <em>O(n!)</em></em></li>
+</ul>
+
         </td></tr>
         </tbody></table>
     </td>
