@@ -61,7 +61,7 @@
       </td>  
 </tr></tbody></table>
 <br>
-<em>note: this is only the first draft of the notes page! i only have the <b>time complexity</b> notes and part of the <b>data structures</b> notes up as of right now!</em>
+<em>note: this is only the first draft of the notes page! i only have the <b>time complexity</b> notes and the <b>data structures</b> notes up as of right now!</em>
 <!-- collapsible -->
 <table width=75% border="0" align="center">
 <tr class="padding">
@@ -89,110 +89,110 @@
 		</code>
 		</pre><br>
 		input and output operations are also <em>O(1)</em>.
-<br><br>
-the time complexity of loops is the number of iterations it runs.
-<pre><code>
-//example one
-for(int i = 1; i <= n; i++) {
-    // constant time code here
-}
+			<br><br>
+			the time complexity of loops is the number of iterations it runs.
+			<pre><code>
+			//example one
+			for(int i = 1; i <= n; i++) {
+				// constant time code here
+			}
 
-//example two
-int i = 0;
-while(i < n) {
-    //constant time code here
-    i++;
-}
-// both examples are O(n), because they are iterated n times.
-</code></pre>
-<br>
-<pre><code>
-for (int i = 1; i <= n + 457737; i++) { 	
-    // constant time code here 
-}
-// because constant factors are lower order terms are ignored when measuring time complexity, the following code is also O(n).
-</code></pre>
-<pre><code>
-for (int i = 1; i <= n; i++) {
-    for (int j = 1; j <= m; j++) {
-        // constant time code here 	
-    }
-}
-</code></pre>
-<br>
-the time complexity of multiple loops is found by multiplying the time complexities of each loop. this code is <em>O(nm)</em>, because the outer loop is <em>O(n)</em> and the inner loop is <em>O(m)</em>.
-<br>
-</pre><code>
-for (int i = 1; i <= n; i++) {
-    for (int j = i; j <= n; j++) {
-        // constant time code here
-    }
-}
-// the outer loop will run O(n) times and since the inner loop can run from anywhere to 1 to n times (and big o notation calculates for worst case scenario), the inner loop is also considered O(n). so, this algorithm is O(n^2) because you multiply the complexities of both loops together! 
-</code></pre>
-<br>
-<pre><code>
-for (int i = 1; i <= n; i++) {
-    for (int j = 1; j <= n; j++) {
-        // constant time code here
-    } 
-} 
-for (int i = 1; i <= m; i++) {
-    // more constant time code here
-}
-// this code is considered O(n^2 + m) because the top block is O(n^2) and the bottom block is O(m).
-</code></pre>
-<br>
-<h3>common complexities and constraints</h3>
-<table border = 1>
-  <tr>
-    <td>constant</td>
-    <td><em>O(1)</em></td>
-  </tr>
-  <tr>
-    <td>logarithmic</td>
-    <td><em>O(log(n))</em></td>
-  </tr>
-  <tr>
-    <td>linear</td>
-    <td><em>O(n)</em></td>
-  </tr>
-  <tr>
-    <td>linearithmic</td>
-    <td><em>O(n(log(n))</em></td>
-  </tr>
-  <tr>
-    <td>quadric</td>
-    <td><em>O(n^2)</em></td>
-  </tr>
-  <tr>
-    <td>cubic</td>
-    <td><em>O(n^3)</em></td>
-  </tr>
-  <tr>
-    <td>exponential</td>
-    <td><em>O(b^n)</em></td>
-  </tr>
-  <tr>
-    <td>factorial</td>
-    <td><em>O(n!)</em></td>
-  </tr>
-</table>
-<br><br>
-<ul>
-  <li>math formulas that calculate an answer: <em>O(1)</em></li>
-  <li>binary search: <em>O(log ⁡n)</em></li>
-  <li>sorted set/map or priority queue: <em>O(log ⁡n)</em> per     operation</li>
-  <li>prime factorization of an integer, or checking primality or compositeness of an integer naively: <em>O(√n)</em> (square root n)</li>
-  <li>reading in n items of input: <em>O(n)</em>
-</li>
-  <li>iterating through an array or a list of <em>n</em> elements: <em>O(n)</em></li>
-  <li>sorting: usually <em>O(n log ⁡n)</em> for default sorting algorithms (mergesort, Collections.sort, Arrays.sort)</li>
-  <li>iterating through all subsets of size <em>k</em> of the input elements: <em>O(n^k)</em>. for example, iterating through all triplets is <em>O(n^3)</em>.</li>
-  <li>iterating through all subsets of size <em>k</em> of the input elements: <em>O(n^k)</em>. for example, iterating through all triplets is <em>O(n^3)</em>.</li>
-  <li>iterating through all subsets: <em>O(2^n)</em></li>
-<li>iterating through all permutations: <em>O(n!)</em></em></li>
-</ul>
+			//example two
+			int i = 0;
+			while(i < n) {
+				//constant time code here
+				i++;
+			}
+			// both examples are O(n), because they are iterated n times.
+			</code></pre>
+			<br>
+			<pre><code>
+			for (int i = 1; i <= n + 457737; i++) { 	
+				// constant time code here 
+			}
+			// because constant factors are lower order terms are ignored when measuring time complexity, the following code is also O(n).
+			</code></pre>
+			<pre><code>
+			for (int i = 1; i <= n; i++) {
+				for (int j = 1; j <= m; j++) {
+					// constant time code here 	
+				}
+			}
+			</code></pre>
+			<br>
+			the time complexity of multiple loops is found by multiplying the time complexities of each loop. this code is <em>O(nm)</em>, because the outer loop is <em>O(n)</em> and the inner loop is <em>O(m)</em>.
+			<br>
+			</pre><code>
+			for (int i = 1; i <= n; i++) {
+				for (int j = i; j <= n; j++) {
+					// constant time code here
+				}
+			}
+			// the outer loop will run O(n) times and since the inner loop can run from anywhere to 1 to n times (and big o notation calculates for worst case scenario), the inner loop is also considered O(n). so, this algorithm is O(n^2) because you multiply the complexities of both loops together! 
+			</code></pre>
+			<br>
+			<pre><code>
+			for (int i = 1; i <= n; i++) {
+				for (int j = 1; j <= n; j++) {
+					// constant time code here
+				} 
+			} 
+			for (int i = 1; i <= m; i++) {
+				// more constant time code here
+			}
+			// this code is considered O(n^2 + m) because the top block is O(n^2) and the bottom block is O(m).
+			</code></pre>
+			<br>
+			<h3>common complexities and constraints</h3>
+			<table border = 1 bgcolor="5A5858">
+			  <tr>
+				<td>constant</td>
+				<td><em>O(1)</em></td>
+			  </tr>
+			  <tr>
+				<td>logarithmic</td>
+				<td><em>O(log(n))</em></td>
+			  </tr>
+			  <tr>
+				<td>linear</td>
+				<td><em>O(n)</em></td>
+			  </tr>
+			  <tr>
+				<td>linearithmic</td>
+				<td><em>O(n(log(n))</em></td>
+			  </tr>
+			  <tr>
+				<td>quadric</td>
+				<td><em>O(n^2)</em></td>
+			  </tr>
+			  <tr>
+				<td>cubic</td>
+				<td><em>O(n^3)</em></td>
+			  </tr>
+			  <tr>
+				<td>exponential</td>
+				<td><em>O(b^n)</em></td>
+			  </tr>
+			  <tr>
+				<td>factorial</td>
+				<td><em>O(n!)</em></td>
+			  </tr>
+			</table>
+			<br><br>
+			<ul>
+			  <li>math formulas that calculate an answer: <em>O(1)</em></li>
+			  <li>binary search: <em>O(log ⁡n)</em></li>
+			  <li>sorted set/map or priority queue: <em>O(log ⁡n)</em> per     operation</li>
+			  <li>prime factorization of an integer, or checking primality or compositeness of an integer naively: <em>O(√n)</em> (square root n)</li>
+			  <li>reading in n items of input: <em>O(n)</em>
+			</li>
+			  <li>iterating through an array or a list of <em>n</em> elements: <em>O(n)</em></li>
+			  <li>sorting: usually <em>O(n log ⁡n)</em> for default sorting algorithms (mergesort, Collections.sort, Arrays.sort)</li>
+			  <li>iterating through all subsets of size <em>k</em> of the input elements: <em>O(n^k)</em>. for example, iterating through all triplets is <em>O(n^3)</em>.</li>
+			  <li>iterating through all subsets of size <em>k</em> of the input elements: <em>O(n^k)</em>. for example, iterating through all triplets is <em>O(n^3)</em>.</li>
+			  <li>iterating through all subsets: <em>O(2^n)</em></li>
+			<li>iterating through all permutations: <em>O(n!)</em></em></li>
+			</ul>
 
         </td></tr>
         </tbody></table>
@@ -234,6 +234,8 @@ for (int i = 1; i <= m; i++) {
 			  <li><code>empty()</code>, which returns <code>true</code> if the data structure has nothing in it, and <code>false</code> if not.</li>
 			</ul>
 		</ul>
+		
+		
 		<h3>arrays</h3>
 		the array is one of the simplest data structures. in C++, there is also an <code>array</code> class in the STL (or <a href=“https://en.wikipedia.org/wiki/Standard_Template_Library” target=_blank>Standard Template Library</a>)<br>
 		<pre><code>
@@ -250,10 +252,276 @@ for (int i = 1; i <= m; i++) {
 			<ul><li>
 			note: <b>local variables</b> are declared inside a function, and <b>global variables</b> are declared outside the function!
 			</li></ul>
-		  <li></li>
+		</ul>
 		  <li>declare the array with an empty list (like <code>int arr[25]{};</code>)</li>
 		  <li>use a built-in function (like <code>std::fill_n(arr, 25, 0)</code> or <code>std::fill(arr, arr+25, 0)</code>)</li>
+		  
+		  
+		<h3>dynamic arrays</h3>
+		<b>dynamic arrays</b>, or <code>vector</code> in C++, support all functions of a normal array, can resize themselves to accommodate more elements, and can add/delete elements at the end in <em>O(1)</em> (or constant) time
+		<pre><code>
+		vector<int> v; 
+		for(int i = 1; i <= 10; i++) {
+			v.push_back(i);
+		}
+		// creates the vector v and adds the numbers 1-10 to it
+		</code></pre>
+		<code>g++</code> (the C++ compiler) will allow arrays of a variable length, making it <em>O(n)</em>:
+		<pre><code>
+		vector<int> v(n); // one way 
+		vector<int> v; v.resize(n); // another way
+		</code></pre>
+		array-contest problems use mostly one-, two-, and three- dimensional static arrays. but, there might also be:
+		<ul>
+		  <li>dynamic arrays of dynamic arrays (vector<vector<int>>)</li>
+		  <li>static arrays of dynamic arrays (array<vector<int>,5>)</li>
+		  <li>dynamic arrays of static arrays (vector<array<int,5>>)</li>
+		  <li>and so on…(so confusing i know!!)</li>
 		</ul>
+		<h3>iterating</h3>
+		use a <b>for loop<b> as a way to iterate through all the elements of a dynamic/static array.
+		<pre><code>
+		vector<int> v{1,7,4,5,2}; 
+		for (int i = 0; i < int(size(v)); i++) { 	
+			cout << v[i] << " "; 
+		} 
+		cout << endl;
+		</code></pre>
+		<b>iterators</b>: we can also use iterators to do this! they allow you to traverse a container by pointing to any object in the container. NOT the same as a pointer!
+		<br>
+		<code>v.begin()</code> or <code>begin(v)</code> return an iterator pointing to the first element of vector <code>v</code>.
+		<pre><code>
+		for (vector<int>::iterator it = v.begin(); it != v.end(); ++it) { 	   
+			cout << *it << " "; //prints the values in the vector using the iterator 
+		}
+		</code></pre>
+		<pre><code>
+		vector<int> v{1,7,4,5,2}; for (auto it = begin(v); it != end(v); it = next(it)) {
+			cout << *it << " "; //prints the values in the vector using the iterator 
+		}
+		// this is another way to write the code before this, C++ 11 automatically infers the type of an object so you don’t need to write <b>vector<int></b> in the loop
+		</code></pre>
+		we can <em>also</em> use a for-each loop to do the same thing (this is the nature of coding, there are so many ways to do the exact same thing!)
+		<code><pre>
+		for (int element : v) { 	
+		cout << element << " "; //prints the values in the vector 
+		}
+		// this is honestly probably the easiest way, to me it just makes the most sense…and it’s the shortest too lol
+		</code></pre>
+		<h3>inserting/erasing</h3>
+		insertion and erasure in the middle of <code>vectors</code> are <em>O(n)</em>.
+		<pre><code>
+		vector<int> v; v.push_back(2); // [2]
+		v.push_back(3); // [2, 3] 
+		v.push_back(7); // [2, 3, 7] 
+		v.push_back(5); // [2, 3, 7, 5]
+		v[1] = 4; // sets element at index 1 to 4 -> [2, 4, 7, 5]
+		v.erase(v.begin() + 1); // removes element at index 1 -> [2, 7, 5] 
+		// this remove method is O(n); to be avoided 
+		v.push_back(8); // [2, 7, 5, 8] 
+		v.erase(v.end()-1); // [2, 7, 5] 
+		// here, we remove the element from the end of the list; this is O(1).
+		v.push_back(4); // [2, 7, 5, 4] 
+		v.push_back(4); // [2, 7, 5, 4, 4] 
+		v.push_back(9); // [2, 7, 5, 4, 4, 9] 
+		cout << v[2]; // 5 
+		v.erase(v.begin(), v.begin()+3); // [4, 4, 9] 
+		// this erases the first three elements; O(n)
+		//just a ton of examples!
+		</code></pre>
+		<h3>strings</h3>
+		some basic string manipulation techniques that are a must-know: (<a href=“https://www.learncpp.com/cpp-tutorial/introduction-to-stdstring/” target=_blank>this resource</a> is especially helpful if you still don’t understand)
+		<ul>
+		  <li>reading strings from standard input:
+		  <pre><code>
+		  #include <string> 
+		  int main() {
+			std::string name {"Alex"}; // initialize name with string literal 
+			"Alex" name = "John"; // change name to "John" 
+			return name; 
+		  }
+		  </pre></code>
+		  </li>
+		  <li>
+		  how to use <code>getline</code> and <code>cin</code> together:
+		  <ul>
+			<li><code>getline</code> reads characters from an input and puts them into a string</li>
+			<li>this is because compilers stop reading the input stream as soon as it encounters a “ “ character</li>
+			<li><code>cin</code> cannot read multi-word or multiline input!</li>
+		  </ul>
+		  <pre><code>
+		  #include <string> // For std::string and std::getline 
+		  #include <iostream> 
+			int main() { 
+		std::cout << "Enter your full name: ";
+		std::string name{}; 
+		std::getline(std::cin >> std::ws, name); // read a full line of text into name 
+
+		std::cout << "Enter your age: "; 
+		std::string age{}; 
+		std::getline(std::cin >> std::ws, age); // read a full line of text into age 
+
+		std::cout << "Your name is " << name << " and your age is " << age << '\n'; 
+
+		return 0; }
+		  </pre></code>
+		  </li>
+		  <li>
+		  knowing how to sort/concatenate strings, and loop through a string’s characters:
+		  <pre><code>
+		  #include <iostream> 
+		  #include<algorithm> 
+		  using namespace std; // this means we don’t have to write “std::” before everything! 
+		  int main(){ 
+			string s; 
+			cout << "Enter a string: ";
+			cin >> s; sort(s.begin(), s.end()); // sort function included in <algorithm> 
+			cout << "The sorted string is: " << s; 
+			return 0; 
+			  }
+		  </code></pre>
+		  the <code>sort()</code> function from the STL can be used to sort a string by using the <code>algorithm</code> header in your code.
+		  <b>syntax:</b> <code>sort(first iterator, last iterator)</code><br>
+		  &#10159; NOTE: only non-spaced strings can be sorted using the <code>sort()</code> function.
+		  </li>
+		  <li>
+		  <b>concatenation</b>: adding strings together to make a new string.
+		  <pre><code>
+		  string firstName = "John"; 
+		  string lastName = "Doe"; 
+		  string fullName = firstName + " " + lastName; 
+		  cout << fullName;
+		  // the + operator can be used between strings to join them
+		  </code></pre>
+		  <pre><code>
+		  string firstName = "John "; //add a space at the end of this string 
+		  string lastName = "Doe"; 
+		  string fullName = firstName.append(lastName); 
+		  cout << fullName; // output: John Doe (not JohnDoe)!!!
+		  // the append() function can also be used to concatenate strings
+		  </code></pre>
+		  </li>
+		  <li>
+		  looping through a string’s characters (easiest way is to use a <code>for</code> loop):
+		  <pre><code>
+		  #include <iostream> 
+		  using namespace std; 
+		  main() { 
+			string s = "Hello World"; 
+			for(int i = 0; i < s.length(); i++) { 
+			  cout <<s.at(i) << endl; //get character at position i 
+			} 
+		  }
+		  // length() is used to find the length of a string (don’t use it for any other data type!)
+		  </pre></code>
+		  </li>
+		  <li>
+		  how to get substrings with <code>string::substr:</code><br>
+		  <code>std::substr()</code> takes two values (<code>pos</code> and <code>len</code>) and returns a newly constructed string object, with its value initialized to a substring of the original string.<br>
+		  <b>syntax:</b> <code>string substr (size_t pos, size_t len) const;</code><br>
+		  <b>parameters:</b>
+			<ol>
+			<li><b>pos:</b> Position of the first character to be copied.</li>
+			<li><b>len:</b> Length of the sub-string.</li>
+			<li><b>size_t:</b> It is an unsigned integral type.</li>
+			</ol>
+		  <pre><code>
+		  #include <string.h>
+		  #include <iostream>
+		  using namespace std;
+		 
+		  int main()
+		  {
+			// Take any string
+			string s1 = "Kelsey";
+
+			// Copy two characters of s1 (starting from position 3)
+			string r = s1.substr(3, 2);
+
+			// prints the result
+			cout << "String is: " << r;
+
+			return 0;
+		  }
+		  // output "String is: se"
+		  // note that the index of the first character is 0!
+		  </code></pre>
+		  </li>
+		</ul>
+		<h3>pairs and tuples</h3>
+		<h4>pairs: can store two elements of different types.</h4><br>
+		in C++, the following code for pairs is used: <code></code>
+		<ul>
+		  <li><code>pair<type1, type2> p</code>: creates the pair <code>p</code> with two elements, the first one being of <code>type1</code> and the second one being of <code>type2</code></li>
+		  <li><code>make_pair(a, b)</code>: returns a pair with values <code>a</code>, <code>b</code></li>
+		  <li><code>{a, b}</code>: with C++11 and above, this can be used as to create a pair, which is easier to write than <code>make_pair(a, b)</code> <i>but less intuitive in my opinion, so many references won’t use this</i></li>
+		  <li><code>pair.first</code>: the first value of the pair</li>
+		  <li><code>pair.second</code>: the second value of the pair</li>
+		</ul>
+		<pre><code>
+		#include <bits/stdc++.h>
+		using namespace std;
+
+		int main() {
+			pair<string, int> myPair1 = make_pair("Testing", 123);
+			cout << myPair1.first << " " << myPair1.second << endl;
+			myPair1.first = "It is possible to edit pairs after declaring them";
+			cout << myPair1.first << " " << myPair1.second << endl;
+			pair<string, string> myPair2 = {"Testing", "curly braces"};
+			cout << myPair2.first << " " << myPair2.second << endl;
+		}
+
+		/* Output:
+		Testing 123
+		It is possible to edit pairs after declaring them 123
+		Testing curly braces
+		*/
+		</code></pre>
+		<h4>tuples: can store more than two elements of different types.</h4>
+		in C++, the following code for tuples is used:
+		<ul>
+		  <li><code>tuple<type1, type2, ..., typeN> t</code>: creates a tuple named <code>t</code> with <code>N</code> elements, i'th one being of <code>typei</code></li>
+		  <li><code>make_tuple(a, b, c, ..., d)</code>: returns a tuple with values written in the brackets</li>
+		  <li><code>get i(t)</code>: Returns the <code>i</code>'th element of the tuple <code>t</code> (can also be used to change the element of a tuple)</li>
+		  <ul><li>this operation only works for a constant value of <code>i</code> </li></ul>
+		  <li><code>tie(a, b, c, ..., d) = t</code>: assigns <code>a, b, c, ..., d</code> to the elements of the tuple <code>t</code> accordingly</li>
+		</ul>
+		<pre><code>
+		#include <bits/stdc++.h>
+		using namespace std;
+
+		int main() {
+			int a = 3, b = 4, c = 5;
+			tuple<int, int, int> t = tie(a, b, c);
+			cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
+			get<0>(t) = 7;
+			cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
+
+			tuple<string, string, int> tp2 = make_tuple("Hello", "world", 100);
+			string s1, s2; int x;
+			tie(s1, s2, x) = tp2;
+			cout << s1 << " " << s2 << " " << x << endl;
+		}
+
+		/* Output:
+		3 4 5
+		7 4 5
+		Hello world 100
+		*/
+		// you have to assign data types to a tuple before you assign values to it!
+		</code></pre>
+		<h3>memory allocation</h3>
+		the USACO memory limit is 256 MB. to estimate how many values can be stored within this limit:
+		<ol>
+		  <li>total memory size in bytes: 256 MB = 256 * 10^6</li>
+		  <li>divide the size (in bytes), of an <code>int</code> (4 bytes), or a <code>long long</code> (8 bytes), etc.</li>
+		  <ol><li>the number of <code>ints</code> you are able to store is (256*10^6)/4 = 64 * 10^6.</li></ol>
+		  <li>program overhead (which needs to be considered, especially with recursive functions) will reduce the amount of energy available.</li>
+		  <ol>
+			<li><a href=”https://stackoverflow.com/questions/2860234/what-is-overhead” target=_blank>program overhead:</a> the resources available to set up an operation</li>
+			<li><a href=”https://www.geeksforgeeks.org/recursive-functions/” target=_blank>recursive functions:</a> a function that references itself</li>
+		  </ol>
+		</ol>
         </td></tr>
         </tbody></table>
     </td>
