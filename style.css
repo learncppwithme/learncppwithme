@@ -20,3 +20,7 @@ a, a:visited {
 .nav {
 	margin-top: 20px;
 }
+
+b {
+	font-weight: 900;
+}
