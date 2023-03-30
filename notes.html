@@ -61,7 +61,7 @@
       </td>  
 </tr></tbody></table>
 <br>
-<em>note: this is only the first draft of the notes page! i only have the <b>time complexity</b> notes and the <b>data structures</b> notes up as of right now!</em>
+<em>note: this is only the first draft of the notes page! i only have the <b>time complexity</b> notes, the <b>data structures</b> notes, and the <b>rectangle geometry</b> notes up as of right now!</em>
 <!-- collapsible -->
 <table width=75% border="0" align="center">
 <tr class="padding">
@@ -547,7 +547,77 @@
         </thead>
         <tbody bgcolor="#737373" class="content">
         <tr><td>
-        here are my rectangle geometry notes:
+		<h3>common formulas</h3>
+		certain tasks in rectangle geometry questions show up again and again. for example, many problems require you to:
+		<ul>
+		  <li>find the overlapping area of 2+ rectangles based on their coordinates</li>
+		  <li>determine whether 2 rectangles intersect</li>
+		  <li><em>(these formulas only apply to rectangles w/ sides || to the coordinate axes.)</em></li>
+		</ul>
+		&#10159; a rectangle can be represented w/ two points: the top right corner (labeled as <em>tr</em>) and the bottom left corner (labeled as <em>bl</em>)<br>
+		<em>assuming that increasing x moves to the right and increasing y moves up</em>
+		<h3>finding area</h3>
+		<ul>
+		  <li>the normal formula for finding the area of an individual rectangle is of course, <em>w ⋅ l</em>.</li>
+		  <li><b>length</b> is the length of vertical sides, and <b>width</b> is length of the horizontal sides.
+		</ul>
+		<ol>
+		  <li><b>width</b> = <em>trₓ - blₓ</em></li>
+		  <li><b>length</b> = <em>trᵧ - blᵧ</em></li>
+		  <li><b>area</b> = <b>width</b> ⋅ <b>length</b></li>
+		</ol>
+		<h4>implementation</h4>
+		<pre><code>
+		long long area(int bl_x, int bl_y, int tr_x, int tr_y) {
+			long long length = tr_y - bl_y;
+			long long width = tr_x - bl_x;
+			return length * width;
+		}
+		</code></pre>
+
+		<h3>checking if two rectangles intersect</h3>
+		there are only two cases where two rectangles <em>a</em> and <em>b</em> don’t intersect:
+		<ol>
+		  <li><em>trₐᵧ ≤ bl₆ᵧ</em> or <em>blₐᵧ ≥ tr₆ᵧ</em></li>
+		  <li><em>blₐₓ ≥ tr₆ₓ</em> or <em>trₐₓ ≤ bl₆ₓ</em></li>
+		</ol>
+		in all other cases, the rectangles intersect.
+		<h4>implementation</h4>
+		<pre><code>
+		bool intersect(vector<int> s1, vector<int> s2) {
+			int bl_a_x = s1[0], bl_a_y = s1[1], tr_a_x = s1[2], tr_a_y = s1[3];
+			int bl_b_x = s2[0], bl_b_y = s2[1], tr_b_x = s2[2], tr_b_y = s2[3];
+			
+			// no overlap
+			if (bl_a_x >= tr_b_x || tr_a_x <= bl_b_x 
+					|| bl_a_y >= tr_b_y || tr_a_y <= bl_b_y) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+		</code></pre>
+		
+		<h3>finding area of intersection</h3>
+		<ul>
+		  <li>assuming that the shape formed by the intersection of two rectangles is also rectangular..</li>
+		  <li>first, find this rectangle’s length and width:</li>
+		  <ul>
+			<li><b>width</b> <em>= min(tr(ax), tr(bx)) - max(bl(ax), bl(bx))</em></li>
+			<li><b>length</b> <em>= min(tr(ay),tr(by))-max(bl(ay),bl(by))</em></li>
+		  </ul>
+		  <li>if either of these values are negative, the rectangles <b>do not intersect</b>. if they are zero, the rectangles intersect at <b>a single point</b>. multiply the <b>length</b> and <b>width</b> to find the overlapping area.</li>
+		<h4>implementation</h4>
+		<pre><code>
+		int inter_area(vector<int> s1, vector<int> s2) {
+			int bl_a_x = s1[0], bl_a_y = s1[1], tr_a_x = s1[2], tr_a_y = s1[3];
+			int bl_b_x = s2[0], bl_b_y = s2[1], tr_b_x = s2[2], tr_b_y = s2[3];
+
+			return ((min(tr_a_x, tr_b_x) - max(bl_a_x, bl_b_x)) *
+					(min(tr_a_y, tr_b_y) - max(bl_a_y, bl_b_y)));
+			}
+		</code></pre>
+
         </td></tr>
         </tbody></table>
     </td>
