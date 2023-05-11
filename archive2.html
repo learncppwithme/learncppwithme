@@ -7,11 +7,48 @@
 <!-- google analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6YQE57BVZ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
-  gtag('config', 'G-Y6YQE57BVZ');
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 </script>
 
 <body>
@@ -36,6 +73,7 @@
     </td></tr></table>
 </td>
 <td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+	<div class="filterDiv nov">
         <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
         <thead>
             <tr bgcolor="#5A5858"><th>11/14/2022</th></tr>
@@ -46,6 +84,7 @@
         	on this website, i will be updating my process of learning c++ throughout the 2022-2023 school year...<a href=#>continue reading&#8594;</a>
         	</td></tr>
         </tbody></table>
+	</div>
 </td>
 <td width=6% rowspan="18"> <!-- TRANSPARENT TABLE 2-->
     <table border="0" width=100%>
@@ -59,30 +98,16 @@
         </thead>
         <tbody bgcolor="#737373">
         <tr><td>
-        	<form action="/action_page.php">
-			    <input type="checkbox" id="october" name="october" value="October2022">
-			    <label for="october"> October 2022</label><br>
-				
-			    <input type="checkbox" id="november" name="november" value="November2022">
-			    <label for="november"> November 2022</label><br>
-				
-				<input type="checkbox" id="december" name="december" value="December2022">
-			    <label for="december"> December 2022</label><br>
-				
-				<input type="checkbox" id="january" name="january" value="January2023">
-			    <label for="january"> January 2023</label><br>
-				
-				<input type="checkbox" id="february" name="february" value="February2023">
-			    <label for="february"> February 2023</label><br>
-				
-				<input type="checkbox" id="march" name="march" value="March2023">
-			    <label for="march"> March 2023</label><br>
-				
-				<input type="checkbox" id="april" name="april" value="April2023">
-			    <label for="april"> April 2023</label><br>
-				
-			    <input type="submit" value="Submit">
-			</form>
+		<div id="myBtnContainer">
+        	  <button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
+			  <button class="btn" onclick="filterSelection('nov')"> November 2022</button><br>
+			  <button class="btn" onclick="filterSelection('dec')"> December 2022</button><br>
+			  <button class="btn" onclick="filterSelection('jan')"> January 2023</button><br>
+			  <button class="btn" onclick="filterSelection('feb')"> February 2023</button><br>
+			  <button class="btn" onclick="filterSelection('mar')"> March 2023</button><br>
+			  <button class="btn" onclick="filterSelection('apr')"> April 2023</button><br>
+			  <button class="btn" onclick="filterSelection('may')"> May 2023</button>
+		</div>
         	</td></tr>
         </tbody></table>
 </td>
@@ -95,6 +120,7 @@
 
 <tr> <!-- ROW 2 -->
 <td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+    <div class="filterDiv nov">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>11/28/2022</th></tr>
@@ -105,11 +131,13 @@
     	hi guys! sorry this update is a little bit later than promised, things have been a little busy with...<a href=#>continue reading&#8594;</a>
     	</td></tr>
     </tbody></table>
+	</div>
 </td>
 </tr>
 
 <tr> <!-- ROW 3 -->
 <td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+    <div class="filterDiv dec">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>12/15/2022</th></tr>
@@ -120,11 +148,13 @@
         hi again. sorry it's been so long. from now on i think i'll try to update every two weeks...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
+	</div>
 </td>
 </tr>
 
 <tr> <!-- ROW 4 -->
     <td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+	<div class="filterDiv jan">
         <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
         <thead>
             <tr bgcolor="#5A5858"><th>1/3/2023</th></tr>
@@ -135,11 +165,13 @@
             happy new year! i had a great winter break, even though i didn’t really do anything productive...<a href=#>continue reading&#8594;</a>
             </td></tr>
         </tbody></table>
+	</div>
     </td>
     </tr>
 
 <tr> <!-- ROW 5 -->
 <td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+    <div class="filterDiv jan">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>1/7/2023</th></tr>
@@ -150,11 +182,13 @@
         hi guys! sorry this update is a little bit later than promised, things have been a little...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
+	</div>
 </td>
 </tr>
 
 <tr> <!-- ROW 6 -->
 <td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+	<div class="filterDiv jan">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>1/11/2023</th></tr>
@@ -165,6 +199,7 @@
         happy wednesday! between now and friday, i made some updates to...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
+	</div>
 </td>
 </tr>
             
