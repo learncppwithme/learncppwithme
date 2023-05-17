@@ -2,58 +2,38 @@
 <html lang="en">
 <head>
 	<title>learn c++ with me... | home</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <!-- google analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6YQE57BVZ"></script>
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+<style>
+    .hidden {
+      display: none;
     }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
+ </style>
+<script>
+    $(document).ready(function() {
+      $('.filter-button').click(function() {
+        var month = $(this).data('month');
+        
+        // Show all tables
+        $('table').removeClass('hidden');
+        
+        // Hide tables not matching the selected month
+        $('table:not(.navbar):not(:contains(' + month + '))').addClass('hidden');
+      });
+      
+      $('#reset-button').click(function() {
+        // Show all tables
+        $('table').removeClass('hidden');
+      });
+    });
+  </script>
 
 <body>
 		<!-- nav bar -->
-		<table border="0" cellpadding="0" cellspacing="0" width="50%" align="center">
+		<table class="navbar" border="0" cellpadding="0" cellspacing="0" width="50%" align="center">
 		    <tr class=nav>
                 <th><a href="index.html">home</a></th>
                 <th><a href="blog.html">blog</a></th>
@@ -76,7 +56,7 @@ for (var i = 0; i < btns.length; i++) {
 	<div class="filterDiv nov">
         <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
         <thead>
-            <tr bgcolor="#5A5858"><th>11/14/2022</th></tr>
+            <tr bgcolor="#5A5858"><th>November 14th, 2022</th></tr>
         </thead>
         <tbody bgcolor="#737373">
         <tr><td>
@@ -99,14 +79,11 @@ for (var i = 0; i < btns.length; i++) {
         <tbody bgcolor="#737373">
         <tr><td>
 		<div id="myBtnContainer">
-        	  <button class="btn active" onclick="filterSelection('all')"> Show all</button><br>
-			  <button class="btn" onclick="filterSelection('nov')"> November 2022</button><br>
-			  <button class="btn" onclick="filterSelection('dec')"> December 2022</button><br>
-			  <button class="btn" onclick="filterSelection('jan')"> January 2023</button><br>
-			  <button class="btn" onclick="filterSelection('feb')"> February 2023</button><br>
-			  <button class="btn" onclick="filterSelection('mar')"> March 2023</button><br>
-			  <button class="btn" onclick="filterSelection('apr')"> April 2023</button><br>
-			  <button class="btn" onclick="filterSelection('may')"> May 2023</button>
+		    <button id="reset-button">Reset</button> <br>
+        	<button class="filter-button" data-month="November">November 2022</button><br>
+			<button class="filter-button" data-month="December">December 2022</button><br>
+			<button class="filter-button" data-month="January">January 2023</button><br>
+			<!-- Add more buttons for other months -->
 		</div>
         	</td></tr>
         </tbody></table>
@@ -123,7 +100,7 @@ for (var i = 0; i < btns.length; i++) {
     <div class="filterDiv nov">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
-        <tr bgcolor="#5A5858"><th>11/28/2022</th></tr>
+        <tr bgcolor="#5A5858"><th>November 28th, 2022</th></tr>
     </thead>
     <tbody bgcolor="#737373">
     <tr><td>
@@ -140,7 +117,7 @@ for (var i = 0; i < btns.length; i++) {
     <div class="filterDiv dec">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
-        <tr bgcolor="#5A5858"><th>12/15/2022</th></tr>
+        <tr bgcolor="#5A5858"><th>December 15th, 2022</th></tr>
     </thead>
     <tbody bgcolor="#737373">
     <tr><td>
@@ -157,7 +134,7 @@ for (var i = 0; i < btns.length; i++) {
 	<div class="filterDiv jan">
         <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
         <thead>
-            <tr bgcolor="#5A5858"><th>1/3/2023</th></tr>
+            <tr bgcolor="#5A5858"><th>January 3rd, 2022</th></tr>
         </thead>
         <tbody bgcolor="#737373">
         <tr><td>
@@ -174,7 +151,7 @@ for (var i = 0; i < btns.length; i++) {
     <div class="filterDiv jan">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
-        <tr bgcolor="#5A5858"><th>1/7/2023</th></tr>
+        <tr bgcolor="#5A5858"><th>January 7th, 2023</th></tr>
     </thead>
     <tbody bgcolor="#737373">
     <tr><td>
@@ -191,7 +168,7 @@ for (var i = 0; i < btns.length; i++) {
 	<div class="filterDiv jan">
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
-        <tr bgcolor="#5A5858"><th>1/11/2023</th></tr>
+        <tr bgcolor="#5A5858"><th>January 11th, 2023</th></tr>
     </thead>
     <tbody bgcolor="#737373">
     <tr><td>
