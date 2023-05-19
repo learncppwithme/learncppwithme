@@ -11,6 +11,11 @@
     .hidden {
       display: none;
     }
+	
+	.col {
+	  display: inline-block;
+	  vertical-align: top;
+	}
 </style>
 <script>
     $(document).ready(function() {
@@ -45,32 +50,12 @@
 <br>
 <br>
 <h1 align="center">archive:</h1>
-<table border="0" align="center"> <!--entire table-->
-<tr> <!-- ROW 1 -->
-<td width=2% rowspan="18"> <!-- TRANSPARENT TABLE 1-->
+<div class="col"> <!-- TRANSPARENT TABLE 1-->
     <table border="0" width=100%>
     <tr> <td>
     </td></tr></table>
-</td>
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
-	<table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
-    <thead>
-        <tr bgcolor="#5A5858"><th>November 14th, 2022</th></tr>
-    </thead>
-    <tbody bgcolor="#737373">
-    <tr><td>
-    	<small>posted by kelsey</small><br>
-     	on this website, i will be updating my process of learning c++ throughout the 2022-2023 school year...<a href=#>continue reading&#8594;</a>
-    	</td></tr>
-    </tbody></table>
-
-</td>
-<td width=6% rowspan="18"> <!-- TRANSPARENT TABLE 2-->
-    <table border="0" width=100%>
-    <tr> <td>
-    </td></tr></table>
-</td>
-<td width=30% rowspan="18" align="right" valign="top"> <!--right-->
+</div>
+<div class="col"> <!--left col-->
         <table width=100%  border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
         <thead>
             <tr bgcolor="#5A5858"><th><h3>filter by month:</h3></th></tr>
@@ -87,16 +72,32 @@
 		</div>
         	</td></tr>
         </tbody></table>
-</td>
-<td width=2% rowspan="18"> <!-- TRANSPARENT TABLE 3-->
+</div>
+<div class="col"> <!-- TRANSPARENT TABLE 2-->
     <table border="0" width=100%>
     <tr> <td>
     </td></tr></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 2 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!--right col-->
+<div class="col">
+<!-- ROW 1 -->
+<div>
+	<table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
+    <thead>
+        <tr bgcolor="#5A5858"><th>November 14th, 2022</th></tr>
+    </thead>
+    <tbody bgcolor="#737373">
+    <tr><td>
+    	<small>posted by kelsey</small><br>
+     	on this website, i will be updating my process of learning c++ throughout the 2022-2023 school year...<a href=#>continue reading&#8594;</a>
+    	</td></tr>
+    </tbody></table>
+
+</div>
+
+<!-- ROW 2 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>November 28th, 2022</th></tr>
@@ -107,11 +108,10 @@
     	hi guys! sorry this update is a little bit later than promised, things have been a little busy with...<a href=#>continue reading&#8594;</a>
     	</td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 3 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 3 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>December 15th, 2022</th></tr>
@@ -122,11 +122,10 @@
         hi again. sorry it's been so long. from now on i think i'll try to update every two weeks...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 4 -->
-    <td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 4 -->
+<div> <!--left-->
         <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
         <thead>
             <tr bgcolor="#5A5858"><th>January 3rd, 2022</th></tr>
@@ -137,11 +136,11 @@
             happy new year! i had a great winter break, even though i didn’t really do anything productive...<a href=#>continue reading&#8594;</a>
             </td></tr>
         </tbody></table>
-    </td>
-    </tr>
+    </div>
 
-<tr> <!-- ROW 5 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+
+<!-- ROW 5 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>January 7th, 2023</th></tr>
@@ -152,11 +151,11 @@
         hi guys! sorry this update is a little bit later than promised, things have been a little...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 6 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+
+<!-- ROW 6 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>January 11th, 2023</th></tr>
@@ -167,11 +166,10 @@
         happy wednesday! between now and friday, i made some updates to...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 7 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 7 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>January 17th, 2023</th></tr>
@@ -182,11 +180,10 @@
         you might be wondering why i'm updating on tuesday instead of monday...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 8 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 8 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>January 23rd, 2023</th></tr>
@@ -197,11 +194,10 @@
         midterms week…actually my first midterm is on thursday at 8 AM ...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 9 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 9 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>February 1st, 2023</th></tr>
@@ -212,11 +208,10 @@
         sorry, i know i said i would update on friday, but i got really distracted because...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
 <tr> <!-- ROW 10 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>February 3rd, 2023</th></tr>
@@ -227,11 +222,10 @@
         i think this is the closest in time any of my two blog posts have ever been...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 11 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 11 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>February 9th, 2023</th></tr>
@@ -242,11 +236,10 @@
         i have a lot to update on! that's why this post is so long...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 12 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 12 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>February 14th, 2023</th></tr>
@@ -257,11 +250,10 @@
         happy valentine’s day! i normally would do a blog post a day earlier, but...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
         
-<tr> <!-- ROW 13 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 13 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>February 20th, 2023</th></tr>
@@ -272,11 +264,10 @@
         hey guys, i hope you enjoyed the long weekend! (and i really hope you did...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
-</td>
-</tr>
+</div>
 
-<tr> <!-- ROW 14 -->
-<td width=60% rowspan="1" align="right" valign="top"> <!--left-->
+<!-- ROW 14 -->
+<div> <!--left-->
     <table width=100% border="1" bgcolor="#5A5858" cellspacing="2" cellpadding="4" align="center">
     <thead>
         <tr bgcolor="#5A5858"><th>February 26th, 2023</th></tr>
@@ -287,8 +278,13 @@
         i’m so sad..i did the contest, but as i looked at all the problems, i realized i didn’t...<a href=#>continue reading&#8594;</a>
         </td></tr>
     </tbody></table>
+</div>	
+</div> 
+<div class="col"> <!-- TRANSPARENT TABLE 3-->
+    <table border="0" width=100%>
+    <tr> <td>
+    </td></tr></table>
 </td>
-</tr>		
-</table>
+</div>	
 </body>
 <html>
