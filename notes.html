@@ -534,7 +534,31 @@
         </thead>
         <tbody bgcolor="#737373" class="content">
         <tr><td>
-        sorry, my sets and maps notes aren't up yet!
+			<h2>sets</h2>
+			<b>sets</b>: collections of elements that have no duplicates.<br><br>
+			
+			<h3>unordered sets</h3>
+			<b>unordered sets</b> are stored through <a href=”https://www.google.com/search?q=hashing&oq=hashing&aqs=chrome..69i57j0i433i512l2j0i512l7.1743j0j7&sourceid=chrome&ie=UTF-8” target=_blank>hashing</a>. inserting, deleting, and searching for elements in these sets are all <em>O(1)</em>, and implemented by <code>std::unordered_set</code> under the <code><unordered_set></code> header.<br>
+			examples of operations on an unordered set <code>s</code>:
+			<ul>
+			  <li><code>s.insert(x)</code>: adds the element <code>x</code> to <code>s</code> if not already present</li>
+			  <li><code>s.erase(x</code>): removes the element <code>x</code> from <code>s</code> if already present</li>
+			  <li><code>s.count(x)</code>: counts the number of instances <code>x</code> appears in <code>s</code> (so returns <code>1</code> if yes and <code>0</code> if no)</li>
+			</ul><br>
+			unordered sets work with primitive types (<code>int, char, bool, float, double, and wchar_t</code>) , but require custom hashing for things like vectors and pairs.
+			<pre><code>
+			unordered_set<int> s;
+			s.insert(1);                 // {1}
+			s.insert(4);                 // {1, 4}
+			s.insert(2);                 // {1, 4, 2}
+			s.insert(1);                 // does nothing because 1's already in the set
+			cout << s.count(1) << endl;  // 1
+			s.erase(1);                  // {2, 4}
+			cout << s.count(5) << endl;  // 0
+			s.erase(0);                  // does nothing because 0 wasn't in the set
+			</code></pre>
+			<h3>sorted sets</h3>
+			<em>more to come soon! everything is up on my <a href="https://daffodil-topaz-64a.notion.site/coding-e56070e587e14402913ceaef57271af4" target=_blank>notion</a> though if you're impatient..</em>			
         </td></tr>
         </tbody></table>
     </td>
