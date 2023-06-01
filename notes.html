@@ -61,7 +61,6 @@
       </td>  
 </tr></tbody></table>
 <br>
-<em>note: this is only the first draft of the notes page! i only need to get up the <b>sets and maps</b> notes up, but everything else should be there! i've been having some problems with the formatting of my code in my notes, so i will try to fix that soon</em>
 <!-- collapsible -->
 <table width=75% border="0" align="center">
 <tr class="padding">
@@ -534,9 +533,8 @@
         </thead>
         <tbody bgcolor="#737373" class="content">
         <tr><td>
-			<h2>sets</h2>
 			<b>sets</b>: collections of elements that have no duplicates.<br><br>
-			
+
 			<h3>unordered sets</h3>
 			<b>unordered sets</b> are stored through <a href=”https://www.google.com/search?q=hashing&oq=hashing&aqs=chrome..69i57j0i433i512l2j0i512l7.1743j0j7&sourceid=chrome&ie=UTF-8” target=_blank>hashing</a>. inserting, deleting, and searching for elements in these sets are all <em>O(1)</em>, and implemented by <code>std::unordered_set</code> under the <code><unordered_set></code> header.<br>
 			examples of operations on an unordered set <code>s</code>:
@@ -558,7 +556,113 @@
 			s.erase(0);                  // does nothing because 0 wasn't in the set
 			</code></pre>
 			<h3>sorted sets</h3>
-			<em>more to come soon! everything is up on my <a href="https://daffodil-topaz-64a.notion.site/coding-e56070e587e14402913ceaef57271af4" target=_blank>notion</a> though if you're impatient..</em>			
+			<b>sorted sets</b> are sorted by order of element. inserting, deleting, and searching for elements in these sets are all <code>O(log N)</code>, with <code>N</code> being the number of elements in the set. they are implemented by typing <code>std::set</code> under the <code><set></code> header.<br>
+			<code>std::set</code> includes the same operations as <code>std::unordered_set</code> (insertion, deletion, searches), as well as some additional ones:
+			<ul><li>however these additional operations are more frequently seen in silver-level problems, so i won’t be covering them!</li></ul>
+			<pre><code>
+			set<int> s;
+			s.insert(1);  // [1]
+			s.insert(4);  // [1, 4]
+			s.insert(2);  // [1, 2, 4]
+			// Outputs 1, 2, and 4 on separate lines
+
+			for (int element : s) { cout << element << endl; }
+			// Iterates through a sorted set using a for each loop
+			</code></pre>
+			<h3>example</h3>
+			there are two main methods to calculate the number of <b>distinct</b> values in a given list:<br>
+			<h4>method 1 - using sets</h4>
+			<pre><code>
+			#include <bits/stdc++.h>
+
+			using namespace std;
+
+			int main() {
+				int n;
+				cin >> n;
+
+				set<int> distinctNumbers;
+				for (int i = 0; i < n; i++) {
+					int number;
+					cin >> number;
+					distinctNumbers.insert(number);
+				}
+
+				cout << distinctNumbers.size() << endl;
+			}
+			// Insert all the numbers into a set and then print out its final size
+			// This works because sets only store one copy of each value
+			</code></pre>
+			<h4>method 2 - using sorting</h4>
+			this is probably the harder way, i would recommend when facing a problem like this to use a set instead!
+			<pre><code>
+			#include <bits/stdc++.h>
+			using namespace std;
+
+			int main() {
+				int N;
+				cin >> N;
+				vector<int> arr(N);
+				for (int i = 0; i < N; i++) cin >> arr[i];
+				sort(arr.begin(), arr.end());
+				int ans = 1;
+				for (int i = 1; i < N; i++) {
+					/*
+					 * if the current number is different from the previous
+					 * it is a distinct number so we add 1 to the answer
+					 */
+					ans += (arr[i] != arr[i - 1]);
+				}
+				cout << ans << endl;
+				return 0;
+			}
+			</code></pre>
+			<h3>maps</h3>
+			<b>maps</b>: a set of entries, each with a unique <b>key</b> and a <b>value</b> (which can repeat).<br>
+			maps have three methods:
+			<ol>
+			  <li>add a specified key-value pairing</li>
+			  <li>retrieve value for a key</li>
+			  <li>remove a key-value pairing from the map</li>
+			</ol>
+			<em>sorted</em> maps are sorted in order of key. inserting, deleting, and searching for elements in these sets are all <code>O(log N)</code>, and implemented by <code>std::map</code> (or <code>std::unordered_map</code> if unordered)<br>
+			some <code>map</code> operations include (using <code>m</code> as its name):
+			<ul>
+			  <li><code>m[key]</code>: returns a reference to the value associated with the key <code>key</code>.</li>
+			  <ul>
+				<li>if key isn’t present in the map, then the value associated with it is constructed using the default constructor of the value type.</li>
+				<ul><li>examples: value type = <code>int</code>, value set to <code>O</code>. value type = <code>std::string</code>, value set to <code>“”</code>.</li></ul>
+			  </ul>
+			  <li><code>m.count[key]</code>: returns the number of times the key is in the map (one or zero), therefore checking if that key exists.</li>
+			  <li><code>m.erase[key]</code>: removes the map entry associated with the specified key (if the key was present at all).</li>
+			<pre><code>
+			map<int, int> m;
+			m[1] = 5;                    // [(1, 5)]
+			m[3] = 14;                   // [(1, 5); (3, 14)]
+			m[2] = 7;                    // [(1, 5); (2, 7); (3, 14)]
+			m[0] = -1;                   // [(0, -1); (1, 5); (2, 7); (3, 14)]
+			m.erase(2);                  // [(0, -1); (1, 5); (3, 14)]
+			cout << m[1] << endl;        // 5
+			cout << m.count(7) << endl;  // 0
+			cout << m.count(1) << endl;  // 1
+			cout << m[2] << endl;        // 0
+			</code></pre>
+			<h4>iterating over maps</h4>
+			use a <code>for</code> loop to iterate over maps.
+			<ul>
+			  <li>the <code>auto</code> keyword is used to iterate over any type of pair</li>
+			  <li><code>std::map</code> stores entries as pairs in the form <code>{key, value}</code></li>
+			</ul>
+			<pre><code>
+			// Both of these output the same thing
+			for (const auto &x : m) { cout << x.first << " " << x.second << endl; }
+			for (auto x : m) { cout << x.first << " " << x.second << endl; }
+			/*
+			the first method is preferred over the second because the second will make a copy of each element it iterates over.
+			*/
+			</code></pre>
+			it’s generally a bad idea to add/remove elements from a map when iterating over it.<br>
+			instead, just create a new map, or make a list of the keys to erase during the iteration to erase once finished.<br>		
         </td></tr>
         </tbody></table>
     </td>
